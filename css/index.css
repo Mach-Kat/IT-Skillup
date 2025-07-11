@@ -1,0 +1,256 @@
+:root {
+    --wood-brown: #8B5A2B;
+    --soft-teal-blue: #2A9D8F;
+    --cream: #FFF8E1;
+    --dark-slate: #2F4858;
+}
+
+body {
+    width: 100%;
+    background: var(--soft-teal-blue);
+    font-family: 'Lato', Georgia, sans-serif;
+    font-style: normal;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: var(--cream);
+    padding: 3% 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px dashed var(--soft-teal-blue);
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px dotted var(--wood-brown);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--wood-brown);
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--cream);
+    background-color: var(--soft-teal-blue);
+    border-radius: 10px;
+    transform: scale(1.05) rotate(2deg);
+}
+
+footer {
+    background: var(--cream);
+    padding: 5% 0;
+    text-align: center;
+    width: 100%;
+    border-top: 3px dashed var(--wood-brown);
+}
+
+section {
+    padding: 0.5% 5%;
+}
+
+h1, h2, h3 {
+    color: var(--wood-brown);
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services {
+    background-image: url('placeholder_design.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.services .service-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-group {
+    flex: 1 1 45%;
+    padding: 10px;
+    text-align: center;
+    min-width: 200px;
+    border: 2px solid var(--wood-brown);
+    border-radius: 5px 15px;
+    background: var(--cream);
+    color: var(--dark-slate);
+}
+
+.products {
+    background-image: url('placeholder_chairs.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.products .product-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-group {
+    flex: 1 1 45%;
+    padding: 10px;
+    text-align: center;
+    min-width: 200px;
+    border: 2px solid var(--wood-brown);
+    border-radius: 15px 5px;
+    background: var(--cream);
+    color: var(--dark-slate);
+}
+
+.service-group ul, .product-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-group li, .product-group li {
+    padding: 5px 0;
+    color: var(--dark-slate);
+}
+
+.about, .mission-vision-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col-1, .col-2, .col-3 {
+    flex: 1 1 30%;
+    padding: 10px;
+    min-width: 250px;
+    text-align: center;
+    border: 2px solid var(--wood-brown);
+    border-radius: 10px 5px;
+    background: var(--cream);
+    color: var(--dark-slate);
+}
+
+.welcome {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    color: var(--dark-slate);
+}
+
+button {
+    background-color: var(--soft-teal-blue);
+    color: var(--cream);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--wood-brown);
+    transform: scale(1.1) rotate(-1deg);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .col-1, .col-2, .col-3 {
+        flex: 1 1 100%;
+    }
+
+    .service-group {
+        flex: 1 1 45%;
+        min-width: 150px;
+    }
+
+    .product-group {
+        flex: 1 1 45%;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-group {
+        flex: 1 1 100%;
+    }
+
+    .product-group {
+        flex: 1 1 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
